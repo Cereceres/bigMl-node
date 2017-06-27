@@ -1,25 +1,24 @@
-const Core = require('./lib/core')
+const Core = require('./lib/core');
 
 
 module.exports = class extends Core {
-    constructor(userName, apiKey) {
-        super(userName, apiKey)
-    }
-    createProject(data={}){
-        const path = '/project'
-        return this.api(path, data, 'POST')
-            .then(response => {
-                this._project = this.reponse.resource
-                return reponse
-            })
-    }
+  constructor(userName, apiKey) {
+    super(userName, apiKey);
+  }
+  createProject(data={}) {
+    const path = '/project';
+    return this.api(path, 'POST', data)
+      .then(response => {
+        this._project = response.resource;
+        return response;
+      });
+  }
 
-    createProject(){
-        const path = this._project
-        return this.api(path, {}, 'GET')
-            .then(response => {
-                this._project = this.reponse.resource
-                return reponse
-            })
+  getProject() {
+    if(!this._project) {
+      return Promise.resolve()
     }
-}
+    const path = this._project;
+    return this.api(path, 'GET');
+  }
+};
