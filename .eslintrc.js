@@ -101,16 +101,13 @@ module.exports = exports = {
         "no-shadow": WARN,
         // We require all vars to be initialized (see init-declarations)
         // If we NEED a var to be initialized to undefined, it needs to be explicit
-        "no-undef-init": OFF,
-        "no-undef": ERROR,
-        "no-undefined": OFF,
-        "no-unused-vars": WARN,
+        "no-undef-init": ERROR,
         // Disallow hoisting - let & const don't allow hoisting anyhow
         "no-use-before-define": ERROR,
 
         // Node.js and CommonJS
         "callback-return": [ WARN, [ "callback", "next" ]],
-        "global-require": ERROR,
+        "global-require": OFF,
         "handle-callback-err": WARN,
         "no-mixed-requires": WARN,
         "no-new-require": ERROR,
