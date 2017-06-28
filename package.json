@@ -1,0 +1,35 @@
+{
+  "name": "bigml-node",
+  "version": "1.0.0",
+  "description": "node client to bigML API",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/bootstrap.js test/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cereceres/bigMl-node.git"
+  },
+  "keywords": [
+    "bigML",
+    "node",
+    "client",
+    "API"
+  ],
+  "author": "Jesus Cereceres",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cereceres/bigMl-node/issues"
+  },
+  "homepage": "https://github.com/Cereceres/bigMl-node#readme",
+  "dependencies": {
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "co-mocha": "^1.2.0",
+    "eslint": "^3",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-react": "^7.1.0",
+    "nock": "^9.0.13"
+  }
+}
