@@ -1,7 +1,7 @@
 const assert = require('assert');
 
 const nock = require('nock');
-const nockProject = require('./fixtures/project');
+const nockProject = require('./fixtures/project.fixture');
 const BigML = require('../index');
 
 nockProject(process.env.BIGML_USERNAME, process.env.BIGML_API_KEY);
