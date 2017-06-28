@@ -27,8 +27,8 @@ module.exports = exports = {
             "setWithoutGet": true
         }],
         "block-scoped-var": WARN,
-        "consistent-return": ERROR,
-        "curly": ERROR,
+        "consistent-return": OFF,
+        "curly": OFF,
         "default-case": WARN,
         // the dot goes with the property when doing multiline
         "dot-location": [ WARN, "property" ],
@@ -118,7 +118,7 @@ module.exports = exports = {
         "no-sync": WARN,
 
         // ECMAScript 6 support
-        "arrow-body-style": [ ERROR, "always" ],
+        "arrow-body-style": OFF,
         "arrow-parens": [ ERROR, "always" ],
         "arrow-spacing": [ ERROR, { "before": true, "after": true }],
         "constructor-super": ERROR,
