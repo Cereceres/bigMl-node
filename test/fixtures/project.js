@@ -109,7 +109,7 @@ module.exports = (username, apiKey) => {
 
     nock('https://bigml.io:443', { encodedQueryParams:true })
         .post('/project', { name:'test' })
-        .query({ username:'Cereceres', api_key:'58b16d6795f49205e8c1781fa5e9cd9db0ace89e' })
+        .query(true)
         .reply(201, { category:0, code:201, configuration:null, configuration_status:false, created:'2017-06-28T15:56:54.136273', description:'', dev:null, name:'test', private:true, resource:'project/5953d1c6c135860b160057a0', stats:{ anomalies:{ count:0 }, anomalyscores:{ count:0 }, associations:{ count:0 }, associationsets:{ count:0 }, batchanomalyscores:{ count:0 }, batchcentroids:{ count:0 }, batchpredictions:{ count:0 }, batchtopicdistributions:{ count:0 }, centroids:{ count:0 }, clusters:{ count:0 }, configurations:{ count:0 }, correlations:{ count:0 }, datasets:{ count:0 }, ensembles:{ count:0 }, evaluations:{ count:0 }, executions:{ count:0 }, libraries:{ count:0 }, logisticregressions:{ count:0 }, models:{ count:0 }, predictions:{ count:0 }, scripts:{ count:0 }, sources:{ count:0 }, statisticaltests:{ count:0 }, topicdistributions:{ count:0 }, topicmodels:{ count:0 } }, status:{ code:5, message:'The project has been created' }, tags:[], updated:'2017-06-28T15:56:54.136300' }, [ 'Access-Control-Allow-Methods',
             'POST,GET,PUT,DELETE',
             'Access-Control-Allow-Origin',
@@ -139,7 +139,7 @@ module.exports = (username, apiKey) => {
 
     nock('https://bigml.io:443', { encodedQueryParams:true })
         .put('/project/5953d1c6c135860b160057a0', { name:'test 2' })
-        .query({ username:'Cereceres', api_key:'58b16d6795f49205e8c1781fa5e9cd9db0ace89e' })
+        .query(true)
         .reply(202, { category:0, code:202, configuration:null, configuration_status:false, created:'2017-06-28T15:56:54.136000', description:'', dev:null, name:'test 2', private:true, resource:'project/5953d1c6c135860b160057a0', stats:{ anomalies:{ count:0 }, anomalyscores:{ count:0 }, associations:{ count:0 }, associationsets:{ count:0 }, batchanomalyscores:{ count:0 }, batchcentroids:{ count:0 }, batchpredictions:{ count:0 }, batchtopicdistributions:{ count:0 }, centroids:{ count:0 }, clusters:{ count:0 }, configurations:{ count:0 }, correlations:{ count:0 }, datasets:{ count:0 }, ensembles:{ count:0 }, evaluations:{ count:0 }, executions:{ count:0 }, libraries:{ count:0 }, logisticregressions:{ count:0 }, models:{ count:0 }, predictions:{ count:0 }, scripts:{ count:0 }, sources:{ count:0 }, statisticaltests:{ count:0 }, topicdistributions:{ count:0 }, topicmodels:{ count:0 } }, status:{ code:5, message:'The project has been created' }, tags:[], updated:'2017-06-28T15:56:54.547716' }, [ 'Access-Control-Allow-Methods',
             'POST,GET,PUT,DELETE',
             'Access-Control-Allow-Origin',
