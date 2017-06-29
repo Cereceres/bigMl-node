@@ -82,7 +82,7 @@ module.exports = class extends Core {
     getSource(qs) {
         const path = this._source.resource;
 
-        if (!this._source) return this.getAllSources();
+        if (!this._source) return this.getAllSources(qs);
 
         return this.api(path, 'GET', {}, {}, qs);
     }
@@ -120,5 +120,44 @@ module.exports = class extends Core {
                   return allSources;
               });
         return getAll();
+    }
+
+    createDataset(options) {
+        const path = '/dataset';
+        const data = Object.assign({}, options, { source: this._source.resource });
+        return this.api(path, 'POST', data)
+            .then((response) => {
+                this._dataset = response;
+                return response;
+            });
+    }
+
+    getDataset(qs) {
+        const path = this._dataset.resource;
+
+        if(!path) return this.getAllDataSets(qs);
+
+        return this.api(path, 'GET', {}, {}, qs);
+    }
+
+
+    updateDataset(data) {
+        const path = this._dataset.resource;
+
+        if(!path) return Promise.resolve();
+
+        return this.api(path, 'PUT', data)
+            .then((response) => {
+                this._dataset = response;
+                return response;
+            });
+    }
+
+    deleteDataset() {
+        const path = this._dataset.resource;
+
+        if(!path) return Promise.resolve();
+
+        return this.api(path, 'DELETE');
     }
 };

@@ -15,18 +15,19 @@ const status = {
 describe('description', () => {
     before(() => {
         fixtures();
-//        nock.recorder.rec();
     });
 
     it('should upload from a url', function *() {
         const url = 'https://static.bigml.com/csv/iris.csv';
         const res = yield bigMl.createSourceFromUrl(url);
         assert.deepEqual(res.status, status);
+        assert(bigMl._source);
     });
 
     it('should upload a string', function *() {
         const res = yield bigMl.createSource(data);
         assert.deepEqual(res.status, status);
+        assert(bigMl._source);
     });
 
     it('should get the source', function *() {
