@@ -160,4 +160,9 @@ module.exports = class extends Core {
 
         return this.api(path, 'DELETE');
     }
+
+    setDataset(dataset) {
+        this._dataset = dataset;
+        return this;
+    }
 };

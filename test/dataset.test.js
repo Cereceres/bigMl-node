@@ -12,7 +12,7 @@ const status = {
     message:'The dataset is being processed and will be created soon'
 };
 
-describe('description', () => {
+describe('dataset endpoint', () => {
     before(() => {
         fixtures();
        // nock.recorder.rec();
@@ -45,15 +45,20 @@ describe('description', () => {
         assert.deepEqual(res.status, status);
     });
 
-    it('should update from a url', function *() {
+    it('should update  a dataset', function *() {
         this.bigMl._dataset = { resource:'dataset/595535df7e0a8d5062019eb0' };
         const res = yield this.bigMl.updateDataset({ name:'test 2' });
         assert(res.name === 'test 2');
     });
 
-    it('should delete from a url', function *() {
+    it('should delete a dataset', function *() {
         this.bigMl._dataset = { resource:'dataset/595535df7e0a8d5062019eb0' };
         const res = yield this.bigMl.deleteDataset();
         assert(!res);
+    });
+
+    it('should set the dataset property', function *() {
+        this.bigMl.setDataset({ test:'testing' });
+        assert(this.bigMl._dataset.test === 'testing');
     });
 });

@@ -12,7 +12,7 @@ const status = {
     message: 'The request has been queued and will be processed soon'
 };
 
-describe('description', () => {
+describe('sounce endpoint', () => {
     before(() => {
         fixtures();
     });
