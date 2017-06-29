@@ -9,6 +9,7 @@ const bigML = new BigML();
 describe('project andpoint', () => {
     it('should create a project', function *() {
         const res = yield bigML.createProject({ name: 'test' });
+        assert(bigML._project)
         assert.deepEqual(res.status, { code: 5, message: 'The project has been created' });
     });
 
