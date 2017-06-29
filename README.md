@@ -37,7 +37,7 @@
 
 ## setDataset(dataset)-> Istance
 
-## api(path = '/project', method = 'GET', jsonData = {}, headers = {}, qs = {})
+## api(path = '/project', method = 'GET', jsonData = {}, headers = {}, qs = {}) -> Promise
 
 
 The endspoints not suppoted can be used with api method.
